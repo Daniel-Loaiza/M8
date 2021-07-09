@@ -41,7 +41,7 @@ pytest rest_exercise.py
 
 ## Construido con 🛠️
 
-_Menciona las herramientas que utilizaste para crear tu proyecto_
+This project was built entirely with IDLE(Python 3.8 32-bit)
 
 * [IDLE](https://docs.python.org/3.8/library/idle.html)
 
