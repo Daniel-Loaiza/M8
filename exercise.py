@@ -12,13 +12,14 @@ def findPlayers():
     
     Typical usage example:
     
-    >findPlayers(139)
+    Type a number
+    >139
     
     -Nate Robinson	Mike Wilks
     -Nate Robinson	Brevin Knight
     
     Args:
-        x: A decimal positive integer.
+        height: A decimal positive integer.
         
     """
     
@@ -34,7 +35,7 @@ def findPlayers():
 
     df = df.astype(convert_dict)
 
-    df=df.sort_values(by=['h_in']) # Sort pandas DataFrame
+    df=df.sort_values(by=['h_in']) #Sort pandas DataFrame with time complexity O(NlogN)
     df.reset_index(drop=True, inplace=True)
     
     try:
@@ -51,7 +52,7 @@ def findPlayers():
             left = 0
             right = df.shape[0]-1
             temp=right
-            while(left<right):
+            while(left<right): #Notice we are only using a While loop (Two embedded for loops would take a time complexity of O(N**2)
                 if((df['h_in'][left]+df['h_in'][right])>height):
                     right -= 1
                     temp=right
